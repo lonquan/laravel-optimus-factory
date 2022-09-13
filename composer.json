@@ -2,10 +2,9 @@
     "name": "antcool/laravel-optimus-factory",
     "description": "A can configure multiple jenssegers/optimus instances for Laravel package",
     "keywords": [
-        "antcool/laravel-optimus-factory",
         "laravel",
         "laravel-optimus-factory",
-        "jenssegers/optimus"
+        "jenssegers-optimus"
     ],
     "homepage": "https://github.com/lonquan/laravel-optimus-factory",
     "license": "MIT",
