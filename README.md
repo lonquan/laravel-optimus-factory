@@ -1,5 +1,6 @@
 # laravel-optimus-factory
-A can configure multiple jenssegers/optimus instances package for Laravel 
+
+A can configure multiple jenssegers/optimus instances package for Laravel
 
 ## Installation
 
@@ -29,6 +30,23 @@ OptimusFactory::decode(1985404696) // 1
 
 OptimusFactory::make('scene')->encode(1) // 1059890159
 OptimusFactory::make('scene')->decode(1059890159) // 1
+```
+
+## Model Trait
+
+```php
+use AntCool\OptimusFactory\Traits\UseOptimusId;
+class User extends Model
+{
+    use UseOptimusId;
+    
+    // encoded field
+    protected string $encodeKey = 'user_id';
+    
+    // scene key in config
+    protected string $encodeScene = 'user';
+}
+
 
 ```
 
