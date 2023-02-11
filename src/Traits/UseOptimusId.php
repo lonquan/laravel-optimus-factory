@@ -12,7 +12,7 @@ trait UseOptimusId
         static::created(function (Model $model): void {
             if (!$model->getAttribute($model->getAttribute($model->getEncodeKey()))) {
                 $model->{$model->getEncodeKey()} = app(Factory::class)->encode($model->getKey(), $model->getEncodeScene());
-                $model->save(['timestamps' => false]);
+                $model->saveQuietly(['timestamps' => false]);
             }
         });
     }
