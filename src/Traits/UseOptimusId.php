@@ -24,6 +24,6 @@ trait UseOptimusId
 
     public function getEncodeScene(): string
     {
-        return $this->encodeScene ?? 'default';
+        return $this->getTable();
     }
 }
