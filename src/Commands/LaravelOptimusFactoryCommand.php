@@ -38,11 +38,12 @@ class LaravelOptimusFactoryCommand extends Command
         );
 
         $this->info(sprintf(
-            "'%s' => ['prime' => %s, 'inverse' => %s, 'random' => %s]",
+            "'%s' => ['prime' => %s, 'inverse' => %s, 'random' => %s, 'bits' => %s]",
             $this->argument('scene'),
             $prime,
             $inverse,
-            $rand
+            $rand,
+            $bitLength
         ));
 
         return self::SUCCESS;
