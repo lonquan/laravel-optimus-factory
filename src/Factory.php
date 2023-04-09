@@ -2,7 +2,7 @@
 
 namespace AntCool\OptimusFactory;
 
-use AntCool\OptimusFactory\Exceptions\ConfigUndefined;
+use AntCool\OptimusFactory\Exceptions\ConfigException;
 use Jenssegers\Optimus\Optimus;
 
 class Factory
@@ -11,7 +11,7 @@ class Factory
 
     public function make(string $scene = 'default'): Optimus
     {
-        $options = throw_unless(config('optimus-factory.' . $scene), ConfigUndefined::class, 'Config key undefined.');
+        $options = throw_unless(config('optimus-factory.' . $scene), ConfigException::class, 'Config key undefined.');
 
         return $this->instances[$scene] ?? $this->instances[$scene] = new Optimus(
                 $options['prime'],

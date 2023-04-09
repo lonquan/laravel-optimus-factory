@@ -2,6 +2,6 @@
 
 namespace AntCool\OptimusFactory\Exceptions;
 
-class ConfigUndefined extends \Exception
+class ConfigException extends \Exception
 {
 }
